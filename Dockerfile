@@ -7,8 +7,12 @@ ENV KC_DB=mysql
 
 ENV KC_CACHE_CONFIG_FILE=cache-ispn-jdbc-ping.xml
 COPY ./cache-ispn-jdbc-ping.xml /opt/keycloak/conf/cache-ispn-jdbc-ping.xml
+COPY ./providers /opt/keycloak/providers
+
 RUN rm -f /opt/keycloak/conf/cache-ispn.xml
+
 RUN /opt/keycloak/bin/kc.sh build --db=mysql
+
 RUN /opt/keycloak/bin/kc.sh show-config
 
 FROM quay.io/keycloak/keycloak:19.0.3
