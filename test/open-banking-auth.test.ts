@@ -1,6 +1,6 @@
 import { Match, Template } from 'aws-cdk-lib/assertions';
 import * as cdk from 'aws-cdk-lib';
-import * as OpenBankingAuth from '../lib/open-banking-auth-stack';
+import * as OpenBankingAuth from '../lib/smartpax-key-cloack';
 
 // test('SQS Queue Created', () => {
 //     const app = new cdk.App();
