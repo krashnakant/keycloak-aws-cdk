@@ -1,5 +1,3 @@
-// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
-// SPDX-License-Identifier: MIT-0
 import {
     aws_certificatemanager as certmgr,
     aws_ec2 as ec2,
@@ -8,8 +6,7 @@ import {
     aws_logs as logs,
     aws_rds as rds,
     aws_ecs as ecs,
-    aws_secretsmanager as secretsmanager,
-    aws_ecr as ecr
+    aws_secretsmanager as secretsmanager
 } from 'aws-cdk-lib';
 import * as cdk from 'aws-cdk-lib';
 import {aws_route53 as route53, aws_route53_targets as route53targets} from 'aws-cdk-lib';
@@ -556,7 +553,7 @@ export class ContainerService extends Construct {
                 KC_HOSTNAME_STRICT: 'false',
                 KC_HTTP_RELATIVE_PATH: '/auth',
                 KC_HOSTNAME_STRICT_HTTPS: 'false',
-                KC_HOSTNAME: 'sso1.dev.smartpaxonline.com',
+                KC_HOSTNAME: 'auth.dev.smartpaxonline.com',
 
                 // We don't need to specify `initialize_sql` string into `JGROUPS_DISCOVERY_PROPERTIES` property,
                 // because the default `initialize_sql` is compatible with MySQL. (See: https://github.com/belaban/JGroups/blob/master/src/org/jgroups/protocols/JDBC_PING.java#L55-L60)
