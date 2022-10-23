@@ -1,5 +1,5 @@
 {
-  "app": "npx ts-node --prefer-ts-exts bin/open-banking-auth.ts",
+  "app": "npx ts-node --prefer-ts-exts bin/smartpax-auth.ts",
   "context": {
     "aws-cdk:enableDiffNoFail": "true",
     "@aws-cdk/core:stackRelativeExports": "true"
