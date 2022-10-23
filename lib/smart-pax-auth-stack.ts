@@ -9,7 +9,7 @@ export class SmartPaxAuthStack extends cdk.Stack {
 
         const certificateArn = this.node.tryGetContext('ACM_CERT_ARN') ?? process.env.ACM_CERT_ARN;
 
-        const mykeycloakprops: KeyCloakProps = {
+        const keyCloakProps: KeyCloakProps = {
             certificateArn,
             singleDbInstance: true,
             keycloakVersion: KeycloakVersion.of('0.0.2'),
@@ -18,7 +18,7 @@ export class SmartPaxAuthStack extends cdk.Stack {
         if (!certificateArn) {
             throw new Error('ERROR - ACM_CERT_ARN not found');
         }
-        new KeyCloak(this, 'KeyCloak', mykeycloakprops);
+        new KeyCloak(this, 'KeyCloak', keyCloakProps);
 
     }
 }
