@@ -1,0 +1,6 @@
+{
+  "themes": [{
+    "name" : "smartpax",
+    "types": [ "login", "email" ]
+  }]
+}
