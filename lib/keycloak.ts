@@ -527,8 +527,8 @@ export class ContainerService extends Construct {
             ),
         });
         const taskDefinition = new ecs.FargateTaskDefinition(this, 'TaskDef', {
-            cpu: 2048,
-            memoryLimitMiB: 4096,
+            cpu: 1024,
+            memoryLimitMiB: 2048,
             executionRole: taskRole,
         });
 

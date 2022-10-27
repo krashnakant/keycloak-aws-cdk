@@ -12,7 +12,7 @@ export class SmartPaxAuthStack extends cdk.Stack {
         const keyCloakProps: KeyCloakProps = {
             certificateArn,
             singleDbInstance: true,
-            keycloakVersion: KeycloakVersion.of('0.0.2'),
+            keycloakVersion: KeycloakVersion.of('0.2.0'),
             databaseInstanceType: new ec2.InstanceType('t3.medium'),
         };
         if (!certificateArn) {
