@@ -591,7 +591,7 @@ export class ContainerService extends Construct {
         this.service.connections.allowFrom(this.service.connections, ec2.Port.udp(55200), 'kc jgroups-udp');
         this.service.connections.allowFrom(this.service.connections, ec2.Port.udp(54200), 'kc jgroups-udp-fd');
         this.service.connections.allowFrom(this.service.connections, ec2.Port.udp(8080), 'kc jgroups-udp-fd');
-        this.service.connections.allowFrom(this.service.connections, ec2.Port.tcp(528), 'for smtp');
+        this.service.connections.allowFrom(this.service.connections, ec2.Port.tcp(587), 'for smtp');
 
         if (props.autoScaleTask) {
             const minCapacity = props.autoScaleTask.min ?? props.nodeCount ?? 2;
